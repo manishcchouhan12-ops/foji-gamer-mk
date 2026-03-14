@@ -1,35 +1,51 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>FOJI GAMER MK</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Foji Gamer MK BGMI Shorts Viral Gaming Website">
-
-<style>
+<!DOCTYPE html><html>
+<head><title>FOJI GAMER MK</title><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Foji Gamer MK BGMI Shorts Viral Gaming Website"><style>
 
 body{
 margin:0;
 font-family:Arial;
-background:url("https://wallpapercave.com/wp/wp10039224.jpg");
-background-size:cover;
-background-attachment:fixed;
+background:black;
 color:white;
 text-align:center;
+overflow-x:hidden;
+}
+
+canvas{
+position:fixed;
+top:0;
+left:0;
+z-index:-1;
+}
+
+.nav{
+background:#111;
+padding:15px;
+position:sticky;
+top:0;
+z-index:10;
+box-shadow:0 0 15px red;
+}
+
+.nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-weight:bold;
 }
 
 .logo{
-font-size:40px;
-font-weight:bold;
+font-size:42px;
 color:red;
-margin-top:40px;
-animation:fire 1.5s infinite alternate;
+margin-top:30px;
 text-shadow:0 0 20px red;
+animation:pulse 2s infinite;
 }
 
-@keyframes fire{
-from{transform:scale(1)}
-to{transform:scale(1.08)}
+@keyframes pulse{
+0%{transform:scale(1)}
+50%{transform:scale(1.1)}
+100%{transform:scale(1)}
 }
 
 button{
@@ -40,12 +56,13 @@ color:white;
 border:none;
 border-radius:10px;
 cursor:pointer;
+box-shadow:0 0 15px red;
 }
 
 .box{
 margin:40px auto;
 padding:25px;
-max-width:500px;
+max-width:550px;
 background:#000000cc;
 border-radius:15px;
 box-shadow:0 0 20px red;
@@ -56,66 +73,121 @@ border-radius:10px;
 border:none;
 }
 
-</style>
-</head>
+.shorts-slider{
+display:flex;
+overflow-x:auto;
+gap:15px;
+padding:10px;
+}
 
-<body>
+.short{
+min-width:220px;
+height:380px;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 0 15px red;
+}
 
-<div class="logo">🔥 FOJI GAMER MK 🔥</div>
-<p>BGMI Funny Moments • Viral Shorts • Intense Gameplay</p>
+</style></head><body><canvas id="fire"></canvas>
 
-<a href="https://youtube.com/@fojigamermk" target="_blank">
+<div class="nav">
+<a href="#videos">Videos</a>
+<a href="#shorts">Shorts</a>
+<a href="#giveaway">UC Giveaway</a>
+</div><div class="logo">🔥 FOJI GAMER MK 🔥</div><p>BGMI Funny Moments • Viral Shorts • Intense Gameplay</p><a href="https://youtube.com/@fojigamermk" target="_blank">
 <button>SUBSCRIBE</button>
-</a>
-
-<div class="box">
-<h2>👥 Live Subscribers</h2>
-
-<iframe height="80" width="300"
+</a><div class="box"><h2>👥 Live Subscribers</h2><iframe height="80" width="300"
 src="https://livecounts.io/embed/youtube-live-subscriber-counter/UCeZiNgjGrRnMkyuTYmcC5Kw">
-</iframe>
-
-</div>
-
-<div class="box">
-<h2>🔥 Latest Video</h2>
-
-<iframe width="100%" height="220"
+</iframe></div><div class="box" id="videos"><h2>🔥 Latest Video</h2><iframe width="100%" height="250"
 src="https://www.youtube.com/embed?listType=playlist&list=UUeZiNgjGrRnMkyuTYmcC5Kw"
 allowfullscreen>
+</iframe></div><div class="box" id="shorts"><h2>📱 Latest Shorts</h2><div class="shorts-slider"><div class="short">
+<iframe width="100%" height="100%"
+src="https://www.youtube.com/embed?listType=playlist&list=UUeZiNgjGrRnMkyuTYmcC5Kw&mute=1">
 </iframe>
-
-</div>
-
-<div class="box">
-<h2>📱 Latest Shorts</h2>
-
-<iframe width="100%" height="500"
-src="https://www.youtube.com/embed?listType=playlist&list=UUeZiNgjGrRnMkyuTYmcC5Kw&autoplay=1&mute=1"
-allowfullscreen>
+</div><div class="short">
+<iframe width="100%" height="100%"
+src="https://www.youtube.com/embed?listType=playlist&list=UUeZiNgjGrRnMkyuTYmcC5Kw&mute=1">
 </iframe>
+</div></div></div><div class="box" id="giveaway"><h2>🎁 UC GIVEAWAY</h2><p>हर हफ्ते 10 लोगों को 60 UC दिया जाएगा</p><p>Rules</p><br>1️⃣ Channel Subscribe
+<br>2️⃣ Video Like
+<br>3️⃣ Bell Icon Press
+<br>4️⃣ Comment में BGMI ID लिखो
 
-</div>
-
-<div class="box">
-<h2>🎁 UC GIVEAWAY</h2>
-
-<p>हर हफ्ते 10 लोगों को 60 UC दिया जाएगा।</p>
-
-<p>Rules:</p>
-
-<br>1️⃣ Channel Subscribe  
-<br>2️⃣ Video Like  
-<br>3️⃣ Bell Icon Press  
-<br>4️⃣ Comment में BGMI ID लिखो  
-
-<p>Winner यहाँ से निकलेगा 👇</p>
-
-<a href="https://commentpicker.com/youtube-comment-picker.php" target="_blank">
+<p>Winner यहाँ से निकलेगा</p><a href="https://commentpicker.com/youtube-comment-picker.php" target="_blank">
 <button>Pick Winner</button>
-</a>
+</a></div><script>
 
-</div>
+const canvas = document.getElementById("fire");
+const ctx = canvas.getContext("2d");
 
-</body>
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles=[];
+
+for(let i=0;i<80;i++){
+
+particles.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+r:Math.random()*3+1,
+d:Math.random()*80
+});
+
+}
+
+function draw(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+ctx.fillStyle="red";
+ctx.beginPath();
+
+for(let i=0;i<particles.length;i++){
+
+let p=particles[i];
+
+ctx.moveTo(p.x,p.y);
+ctx.arc(p.x,p.y,p.r,0,Math.PI*2,true);
+
+}
+
+ctx.fill();
+
+update();
+
+}
+
+let angle=0;
+
+function update(){
+
+angle+=0.01;
+
+for(let i=0;i<particles.length;i++){
+
+let p=particles[i];
+
+p.y+=Math.cos(angle+p.d)+1+p.r/2;
+p.x+=Math.sin(angle)*2;
+
+if(p.x>canvas.width+5||p.x<-5||p.y>canvas.height){
+
+particles[i]={
+x:Math.random()*canvas.width,
+y:-10,
+r:p.r,
+d:p.d
+};
+
+}
+
+}
+
+}
+
+setInterval(draw,33);
+
+</script></body>
 </html>
