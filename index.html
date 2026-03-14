@@ -1,5 +1,5 @@
 <!DOCTYPE html><html>
-<head><title>FOJI GAMER MK</title><meta name="viewport" content="width=device-width, initial-scale=1"><script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script><style>
+<head><title>FOJI GAMER MK</title><meta name="viewport" content="width=device-width, initial-scale=1"><style>
 
 body{
 margin:0;
@@ -10,40 +10,30 @@ background-size:cover;
 background-attachment:fixed;
 color:#eee;
 text-align:center;
-scroll-behavior:smooth;
+overflow-x:hidden;
 }
-
-/* NAV */
 
 nav{
 background:#111111cc;
 padding:15px;
 position:sticky;
 top:0;
-box-shadow:0 0 10px #ff4444;
+box-shadow:0 0 10px red;
 }
 
 nav a{
-color:#ddd;
+color:white;
 margin:12px;
 text-decoration:none;
 font-weight:bold;
 }
 
-/* HERO */
-
-.hero{
-padding:80px 20px;
-background:rgba(0,0,0,0.6);
-}
-
 .logo{
-font-size:44px;
+font-size:42px;
 color:#ff4444;
-text-shadow:0 0 12px #ff4444;
+margin-top:30px;
+text-shadow:0 0 15px red;
 }
-
-/* BUTTON */
 
 button{
 padding:12px 35px;
@@ -52,26 +42,41 @@ color:white;
 border:none;
 border-radius:8px;
 cursor:pointer;
-box-shadow:0 0 8px #ff4444;
+box-shadow:0 0 8px red;
 transition:0.3s;
 }
 
 button:hover{
-box-shadow:0 0 20px #ff2222;
+box-shadow:0 0 20px red;
+transform:scale(1.05);
 }
-
-/* BOX */
 
 .box{
 margin:40px auto;
-max-width:700px;
+max-width:650px;
 padding:25px;
 background:#151515e8;
 border-radius:15px;
-box-shadow:0 0 10px #ff444455;
+box-shadow:0 0 12px #ff4444;
 }
 
-/* GOAL BAR */
+iframe{
+border:none;
+border-radius:10px;
+}
+
+.slider{
+display:flex;
+overflow-x:auto;
+gap:20px;
+padding:20px;
+scroll-behavior:smooth;
+}
+
+.slider iframe{
+width:230px;
+height:420px;
+}
 
 .goalbar{
 background:#333;
@@ -85,37 +90,8 @@ overflow:hidden;
 .goalprogress{
 background:#ff4444;
 height:100%;
-width:0%;
-animation:goal 2s forwards;
+width:40%;
 }
-
-@keyframes goal{
-to{width:40%;}
-}
-
-/* SHORTS */
-
-.slider{
-display:flex;
-overflow-x:auto;
-gap:20px;
-padding:20px;
-}
-
-.slider iframe{
-width:230px;
-height:420px;
-border-radius:10px;
-}
-
-/* VIDEO */
-
-iframe{
-border:none;
-border-radius:10px;
-}
-
-/* THREEJS */
 
 canvas{
 position:fixed;
@@ -124,86 +100,122 @@ left:0;
 z-index:-1;
 }
 
-</style></head><body><nav><a href="#home">Home</a>
+</style></head><body><canvas id="particles"></canvas>
+
+<nav><a href="#home">Home</a>
 <a href="#videos">Videos</a>
 <a href="#shorts">Shorts</a>
 <a href="#giveaway">Giveaway</a>
 <a href="#contact">Contact</a>
 
-</nav><div id="home" class="hero"><div class="logo">🔥 FOJI GAMER MK 🔥</div><p>BGMI Funny Moments • Viral Shorts • Intense Gameplay</p><a href="https://youtube.com/@fojigamermk" target="_blank">
-<button>SUBSCRIBE</button>
+</nav><div id="home"><div class="logo">🔥 FOJI GAMER MK 🔥</div><p>BGMI Funny Moments • Viral Shorts • Intense Gameplay</p><a href="https://youtube.com/@fojigamermk" target="_blank"><button>SUBSCRIBE</button>
+
 </a><p>🎯 Next Goal: 1000 Subscribers</p><div class="goalbar">
 <div class="goalprogress"></div>
-</div><p>400 / 1000</p></div><div class="box"><h2>👥 Live Subscribers</h2><iframe height="90" width="320"
-src="https://livecounts.io/embed/youtube-live-subscriber-counter/UCeZiNgjGrRnMkyuTYmcC5Kw?theme=dark">
-</iframe></div><div class="box" id="videos"><h2>📺 Latest Long Video</h2><iframe width="100%" height="280"
-src="https://www.youtube.com/embed?listType=user_uploads&list=UCeZiNgjGrRnMkyuTYmcC5Kw">
-</iframe></div><div class="box" id="shorts"><h2>📱 Shorts Reels</h2><div class="slider"><iframe src="https://www.youtube.com/embed?listType=user_uploads&list=UCeZiNgjGrRnMkyuTYmcC5Kw&mute=1"></iframe><iframe src="https://www.youtube.com/embed?listType=user_uploads&list=UCeZiNgjGrRnMkyuTYmcC5Kw&mute=1"></iframe><iframe src="https://www.youtube.com/embed?listType=user_uploads&list=UCeZiNgjGrRnMkyuTYmcC5Kw&mute=1"></iframe></div></div><div class="box" id="giveaway"><h2>🎁 UC GIVEAWAY</h2><p>Giveaway video के comments से winner चुना जाएगा</p><p>1️⃣ Subscribe<br>
+</div></div><div class="box"><h2>👥 Live Subscribers</h2><iframe height="90" width="320"src="https://livecounts.io/embed/youtube-live-subscriber-counter/UCeZiNgjGrRnMkyuTYmcC5Kw?theme=dark">
+
+</iframe></div><div class="box" id="videos"><h2>📺 Latest Video</h2><iframe width="100%" height="300"src="https://www.youtube.com/embed/videoseries?list=UUeZiNgjGrRnMkyuTYmcC5Kw"
+
+allowfullscreen>
+
+</iframe></div><div class="box" id="shorts"><h2>📱 Shorts Reels</h2><div class="slider"><iframe src="https://www.youtube.com/embed/hb1yEPQOKGQ?mute=1"></iframe><iframe src="https://www.youtube.com/embed/iBqZERtz4tM?mute=1"></iframe><iframe src="https://www.youtube.com/embed/5OAHgTZX56E?mute=1"></iframe></div></div><div class="box" id="giveaway"><h2>🎁 UC GIVEAWAY</h2><p>Giveaway video के comments से winner चुना जाएगा</p><p>1️⃣ Subscribe<br>
 2️⃣ Like Video<br>
 3️⃣ Bell Icon Press<br>
 4️⃣ Comment BGMI ID
 
-</p><a href="https://commentpicker.com/youtube-comment-picker.php" target="_blank">
-<button>Pick Giveaway Winner</button>
-</a></div><div class="box" id="contact"><h2>🌐 Connect With Me</h2><p>📺 YouTube<br>
-<a href="https://youtube.com/@fojigamermk" target="_blank">Foji Gamer MK</a>
+</p><a href="https://commentpicker.com/youtube-comment-picker.php" target="_blank"><button>Pick Giveaway Winner</button>
 
-<br><br>
+</a></div><div class="box" id="contact"><h2>🌐 Connect With Me</h2><p>📺 YouTube<br>
+
+<a href="https://youtube.com/@fojigamermk" target="_blank">Foji Gamer MK
+
+</a><br><br>
 
 💬 WhatsApp<br>
-<a href="https://wa.me/917003465210" target="_blank">Chat on WhatsApp</a>
 
-<br><br>
+<a href="https://wa.me/917003465210" target="_blank">Chat on WhatsApp
+
+</a><br><br>
 
 ✈ Telegram<br>
-<a href="#">Join Telegram</a>
 
-</p></div><script>
+<a href="https://t.me/7003465210" target="_blank">Join Telegram
 
-/* 3D PARTICLES */
+</a></p></div><script>
 
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
 
-const renderer = new THREE.WebGLRenderer({alpha:true});
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-const geometry = new THREE.BufferGeometry();
-const vertices = [];
+let particles = [];
 
-for (let i = 0; i < 4000; i++) {
+for(let i=0;i<60;i++){
 
-vertices.push(
-THREE.MathUtils.randFloatSpread(2000),
-THREE.MathUtils.randFloatSpread(2000),
-THREE.MathUtils.randFloatSpread(2000)
-);
+particles.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+r:Math.random()*2+1,
+d:Math.random()*60
+})
 
 }
 
-geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+function draw(){
 
-const material = new THREE.PointsMaterial({ color: 0xff4444 });
+ctx.clearRect(0,0,canvas.width,canvas.height);
 
-const points = new THREE.Points(geometry, material);
+ctx.fillStyle="red";
 
-scene.add(points);
+ctx.beginPath();
 
-camera.position.z = 500;
+for(let i=0;i<particles.length;i++){
 
-function animate() {
+let p = particles[i];
 
-requestAnimationFrame(animate);
-
-points.rotation.x += 0.0004;
-points.rotation.y += 0.0006;
-
-renderer.render(scene, camera);
+ctx.moveTo(p.x,p.y);
+ctx.arc(p.x,p.y,p.r,0,Math.PI*2,true);
 
 }
 
-animate();
+ctx.fill();
+
+update();
+
+}
+
+let angle = 0;
+
+function update(){
+
+angle += 0.01;
+
+for(let i=0;i<particles.length;i++){
+
+let p = particles[i];
+
+p.y += Math.cos(angle+p.d)+1+p.r/2;
+p.x += Math.sin(angle)*2;
+
+if(p.x>canvas.width+5||p.x<-5||p.y>canvas.height){
+
+particles[i] = {
+
+x:Math.random()*canvas.width,
+y:-10,
+r:p.r,
+d:p.d
+
+}
+
+}
+
+}
+
+}
+
+setInterval(draw,33);
 
 </script></body>
 </html>
