@@ -13,7 +13,7 @@ margin:0;
 
 header{
 padding:120px 20px;
-background:url("https://wallpaperaccess.com/full/1512226.jpg") center/cover;
+background:url("https://images7.alphacoders.com/119/1199685.jpg") center/cover;
 }
 
 /* FIRE LOGO */
@@ -25,11 +25,8 @@ animation:fire 1s infinite alternate;
 }
 
 @keyframes fire{
-
 0%{text-shadow:0 0 10px red;}
-
-100%{text-shadow:0 0 30px orange;}
-
+100%{text-shadow:0 0 35px orange;}
 }
 
 /* BUTTON */
@@ -42,6 +39,7 @@ border:none;
 border-radius:10px;
 color:white;
 margin-top:20px;
+cursor:pointer;
 }
 
 /* SUB COUNT BOX */
@@ -78,7 +76,7 @@ width:100%;
 border-radius:10px;
 }
 
-/* SHORTS SLIDER */
+/* SHORTS */
 
 .shorts-grid{
 display:flex;
@@ -100,10 +98,15 @@ border-radius:10px;
 
 .giveaway{
 background:#111;
-padding:30px;
+padding:40px;
 margin:40px;
 border-radius:10px;
-box-shadow:0 0 10px red;
+box-shadow:0 0 15px red;
+}
+
+.giveaway a{
+color:yellow;
+text-decoration:none;
 }
 
 </style></head><body><header><h1 class="logo">FOJI GAMER MK</h1><p>BGMI Funny Moments • Viral Shorts • Intense Gameplay</p><a href="https://youtube.com/@fojigamermk" target="_blank">
@@ -113,20 +116,28 @@ box-shadow:0 0 10px red;
 <div class="g-ytsubscribe"
 data-channel="fojigamermk"
 data-layout="full"
-data-count="default"></div></header><div class="sub-box"><h2>👥 Live Subscribers</h2><iframe src="https://livecounts.io/embed/youtube-live-subscriber-counter/UCJ5v_MCY6GNUBTO8-D3XoAg"
+data-count="default"></div></header><div class="sub-box"><h2>👥 Live Subscribers</h2><iframe src="https://livecounts.io/embed/youtube-live-subscriber-counter/UC6gN9kK8d0lYqZfS4XH1gPw"
 height="120"
 width="300"
-frameborder="0"></iframe></div><div class="section"><h2>🔥 Latest Videos</h2><div id="videos" class="video-grid"></div></div><div class="section"><h2>📱 Latest Shorts</h2><div id="shorts" class="shorts-grid"></div></div><div class="giveaway"><h2>🎁 UC GIVEAWAY</h2><p>हर हफ्ते 10 लोगों को 60 UC दिया जाएगा।</p><p>भाग लेने के लिए:
+frameborder="0"></iframe></div><div class="section"><h2>🔥 Latest Videos</h2><div id="videos" class="video-grid"></div></div><div class="section"><h2>📱 Latest Shorts</h2><div id="shorts" class="shorts-grid"></div></div><div class="giveaway"><h2>🎁 UC GIVEAWAY</h2><p>हर हफ्ते 10 लोगों को 60 UC दिया जाएगा।
+
+</p><p>भाग लेने के लिए:
 
 </p><p>1️⃣ Channel Subscribe करें
 2️⃣ Video Like करें
 3️⃣ Bell Icon दबाएं
 4️⃣ Comment में BGMI ID लिखें
 
-</p></div><script src="https://apis.google.com/js/platform.js"></script><script>
+</p><p>Winner Google Random Comment Picker से चुना जाएगा।
+
+</p><p>Latest Giveaway Video:
+
+</p><a href="https://youtube.com/@fojigamermk" target="_blank">Click Here to Watch Giveaway Video
+
+</a></div><script src="https://apis.google.com/js/platform.js"></script><script>
 
 const channel =
-"https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feeds/videos.xml?channel_id=UCJ5v_MCY6GNUBTO8-D3XoAg";
+"https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feeds/videos.xml?channel_id=UC6gN9kK8d0lYqZfS4XH1gPw";
 
 fetch(channel)
 .then(res => res.json())
