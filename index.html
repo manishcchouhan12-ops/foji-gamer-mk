@@ -4,223 +4,112 @@
 body{
 margin:0;
 font-family:Arial;
-background:#0b0b0b;
-background-image:url("https://images6.alphacoders.com/119/1199685.jpg");
-background-size:cover;
-background-attachment:fixed;
-color:#eee;
+background:linear-gradient(180deg,#05070f,#0a0f1f);
+color:white;
 text-align:center;
-overflow-x:hidden;
 }
 
 nav{
-background:#111111cc;
-padding:15px;
-position:sticky;
-top:0;
-box-shadow:0 0 10px red;
+background:black;
+padding:18px;
 }
 
 nav a{
 color:white;
-margin:12px;
+margin:18px;
 text-decoration:none;
 font-weight:bold;
+font-size:18px;
+}
+
+.hero{
+margin-top:80px;
 }
 
 .logo{
-font-size:42px;
-color:#ff4444;
-margin-top:30px;
-text-shadow:0 0 15px red;
+font-size:55px;
+color:#00eaff;
+text-shadow:0 0 20px #00eaff;
+}
+
+.tag{
+font-size:22px;
+margin-top:10px;
 }
 
 button{
-padding:12px 35px;
-background:#ff4444;
-color:white;
+margin-top:25px;
+padding:15px 35px;
+font-size:18px;
+background:#00eaff;
 border:none;
 border-radius:8px;
 cursor:pointer;
-box-shadow:0 0 8px red;
-transition:0.3s;
 }
 
-button:hover{
-box-shadow:0 0 20px red;
-transform:scale(1.05);
-}
-
-.box{
-margin:40px auto;
-max-width:650px;
-padding:25px;
-background:#151515e8;
+.section{
+max-width:900px;
+margin:90px auto;
+padding:40px;
+background:#111628;
 border-radius:15px;
-box-shadow:0 0 12px #ff4444;
+box-shadow:0 0 15px #00eaff;
 }
 
 iframe{
-border:none;
 border-radius:10px;
 }
 
-.slider{
+.grid{
 display:flex;
-overflow-x:auto;
-gap:20px;
-padding:20px;
-scroll-behavior:smooth;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+margin-top:30px;
 }
 
-.slider iframe{
-width:230px;
-height:420px;
-}
-
-.goalbar{
-background:#333;
-height:22px;
-width:260px;
-margin:auto;
+.card{
+background:#1a1f36;
+padding:25px;
 border-radius:12px;
-overflow:hidden;
+width:200px;
+box-shadow:0 0 10px #00eaff;
 }
 
-.goalprogress{
-background:#ff4444;
-height:100%;
-width:40%;
-}
-
-canvas{
-position:fixed;
-top:0;
-left:0;
-z-index:-1;
-}
-</style>
-</head>
-
-<body>
-
-<canvas id="particles"></canvas>
-
-<nav>
+</style></head><body><nav>
 <a href="index.html">Home</a>
 <a href="videos.html">Videos</a>
 <a href="shorts.html">Shorts</a>
 <a href="giveaway.html">Giveaway</a>
 <a href="contact.html">Contact</a>
-</nav>
-<div id="home"><div class="logo">🔥 FOJI GAMER MK 🔥</div><p>BGMI Funny Moments • Viral Shorts • Intense Gameplay</p><a href="https://youtube.com/@fojigamermk" target="_blank"><button>SUBSCRIBE</button>
+</nav><div class="hero"><div class="logo">
+🔥 FOJI GAMER MK 🔥
+</div><div class="tag">
+BGMI Funny Moments • Viral Shorts
+</div><a href="https://youtube.com/@fojigamermk" target="_blank">
+<button>Subscribe Channel</button>
+</a></div><div class="section"><h2>👥 Live Subscribers</h2><iframe height="90" width="320"src="https://livecounts.io/embed/youtube-live-subscriber-counter/UCeZiNgjGrRnMkyuTYmcC5Kw">
 
-</a><p>🎯 Next Goal: 1000 Subscribers</p><div class="goalbar">
-<div class="goalprogress"></div>
-</div></div><div class="box"><h2>👥 Live Subscribers</h2><iframe height="90" width="320"src="https://livecounts.io/embed/youtube-live-subscriber-counter/UCeZiNgjGrRnMkyuTYmcC5Kw?theme=dark">
-
-</iframe></div><div class="box" id="videos"><h2>📺 Latest Video</h2><iframe width="100%" height="300"src="https://www.youtube.com/embed/videoseries?list=UUeZiNgjGrRnMkyuTYmcC5Kw"
+</iframe></div><div class="section"><h2>📺 Featured Gameplay</h2><iframe width="100%" height="350"src="https://www.youtube.com/embed/videoseries?list=UUeZiNgjGrRnMkyuTYmcC5Kw"
 
 allowfullscreen>
 
-</iframe></div><div class="box" id="shorts"><h2>📱 Shorts Reels</h2><div class="slider"><iframe src="https://www.youtube.com/embed/hb1yEPQOKGQ?mute=1"></iframe><iframe src="https://www.youtube.com/embed/iBqZERtz4tM?mute=1"></iframe><iframe src="https://www.youtube.com/embed/5OAHgTZX56E?mute=1"></iframe></div></div><div class="box" id="giveaway"><h2>🎁 UC GIVEAWAY</h2><p>Giveaway video के comments से winner चुना जाएगा</p><p>1️⃣ Subscribe<br>
-2️⃣ Like Video<br>
-3️⃣ Bell Icon Press<br>
-4️⃣ Comment BGMI ID
-
-</p><a href="https://commentpicker.com/youtube-comment-picker.php" target="_blank"><button>Pick Giveaway Winner</button>
-
-</a></div><div class="box" id="contact"><h2>🌐 Connect With Me</h2><p>📺 YouTube<br>
-
-<a href="https://youtube.com/@fojigamermk" target="_blank">Foji Gamer MK
-
-</a><br><br>
-
-💬 WhatsApp<br>
-
-<a href="https://wa.me/917003465210" target="_blank">Chat on WhatsApp
-
-</a><br><br>
-
-✈ Telegram<br>
-
-<a href="https://t.me/7003465210" target="_blank">Join Telegram
-
-</a></p></div><script>
-
-const canvas = document.getElementById("particles");
-const ctx = canvas.getContext("2d");
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-let particles = [];
-
-for(let i=0;i<60;i++){
-
-particles.push({
-x:Math.random()*canvas.width,
-y:Math.random()*canvas.height,
-r:Math.random()*2+1,
-d:Math.random()*60
-})
-
-}
-
-function draw(){
-
-ctx.clearRect(0,0,canvas.width,canvas.height);
-
-ctx.fillStyle="red";
-
-ctx.beginPath();
-
-for(let i=0;i<particles.length;i++){
-
-let p = particles[i];
-
-ctx.moveTo(p.x,p.y);
-ctx.arc(p.x,p.y,p.r,0,Math.PI*2,true);
-
-}
-
-ctx.fill();
-
-update();
-
-}
-
-let angle = 0;
-
-function update(){
-
-angle += 0.01;
-
-for(let i=0;i<particles.length;i++){
-
-let p = particles[i];
-
-p.y += Math.cos(angle+p.d)+1+p.r/2;
-p.x += Math.sin(angle)*2;
-
-if(p.x>canvas.width+5||p.x<-5||p.y>canvas.height){
-
-particles[i] = {
-
-x:Math.random()*canvas.width,
-y:-10,
-r:p.r,
-d:p.d
-
-}
-
-}
-
-}
-
-}
-
-setInterval(draw,33);
-
-</script></body>
+</iframe></div><div class="section"><h2>📱 Latest Shorts</h2><div class="grid"><iframe width="200" height="360"
+src="https://www.youtube.com/embed/hb1yEPQOKGQ"></iframe><iframe width="200" height="360"
+src="https://www.youtube.com/embed/iBqZERtz4tM"></iframe><iframe width="200" height="360"
+src="https://www.youtube.com/embed/5OAHgTZX56E"></iframe></div></div><div class="section"><h2>🎁 Weekly UC Giveaway</h2><p>हर हफ्ते 10 लोगों को 60 UC मिलेगा</p><a href="giveaway.html">
+<button>Join Giveaway</button>
+</a></div><div class="section"><h2>🌐 Join Community</h2><div class="grid"><div class="card">
+YouTube
+<br><br>
+<a href="https://youtube.com/@fojigamermk">Visit</a>
+</div><div class="card">
+WhatsApp
+<br><br>
+<a href="https://wa.me/917003465210">Join</a>
+</div><div class="card">
+Telegram
+<br><br>
+<a href="https://t.me/7003465210">Join</a>
+</div></div></div></body>
 </html>
