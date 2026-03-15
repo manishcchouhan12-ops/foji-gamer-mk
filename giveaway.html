@@ -1,55 +1,184 @@
 <!DOCTYPE html><html>
-<head><title>UC Giveaway</title><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+<head>
+<title>FOJI GAMER MK Giveaway</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"><style>
 
 body{
 margin:0;
 font-family:Arial;
-background:#0a0f1f;
+background:#0b0f1a;
 color:white;
 text-align:center;
+overflow-x:hidden;
 }
 
 nav{
-background:#111;
-padding:15px;
-box-shadow:0 0 10px #00eaff;
+background:black;
+padding:18px;
 }
 
 nav a{
 color:white;
-margin:12px;
+margin:20px;
 text-decoration:none;
 font-weight:bold;
+font-size:18px;
 }
 
-.box{
-margin:40px auto;
-max-width:500px;
-padding:25px;
-background:#111628;
-border-radius:15px;
-box-shadow:0 0 12px #00eaff;
+.banner{
+font-size:48px;
+margin-top:60px;
+color:#ff4040;
+text-shadow:0 0 25px red;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{text-shadow:0 0 10px red;}
+to{text-shadow:0 0 35px red;}
+}
+
+.section{
+max-width:900px;
+margin:80px auto;
+padding:50px;
+background:#11172a;
+border-radius:18px;
+box-shadow:0 0 25px rgba(255,0,0,0.6);
+}
+
+.reward-grid{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:40px;
+margin-top:40px;
+}
+
+.card{
+background:#1a2138;
+padding:35px;
+width:200px;
+border-radius:12px;
+box-shadow:0 0 15px red;
+font-size:20px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.1);
+box-shadow:0 0 25px red;
+}
+
+.rules{
+font-size:20px;
+line-height:45px;
+margin-top:30px;
+}
+
+.timer{
+font-size:36px;
+color:#00ffc8;
+margin-top:20px;
 }
 
 button{
-padding:12px 30px;
-background:#00eaff;
+margin-top:25px;
+padding:18px 40px;
+font-size:20px;
+background:red;
+color:white;
 border:none;
-border-radius:8px;
+border-radius:10px;
+cursor:pointer;
 }
 
-</style></head><body><nav><a href="index.html">Home</a>
+button:hover{
+background:#ff3c3c;
+}
+
+.leaderboard{
+margin-top:25px;
+font-size:20px;
+line-height:40px;
+}
+
+.coin{
+position:fixed;
+top:-50px;
+font-size:24px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+to{transform:translateY(110vh);}
+}
+
+</style></head><body><nav>
+<a href="index.html">Home</a>
 <a href="videos.html">Videos</a>
 <a href="shorts.html">Shorts</a>
 <a href="giveaway.html">Giveaway</a>
 <a href="contact.html">Contact</a>
+</nav><div class="banner">
+🎁 UC GIVEAWAY EVENT 🎁
+</div><div class="section"><h2>🔥 Weekly Giveaway</h2><div class="reward-grid"><div class="card">
+🏆 Winners<br><br>
+10 Players
+</div><div class="card">
+💰 Reward<br><br>
+60 UC
+</div><div class="card">
+📅 Event<br><br>
+Every Week
+</div></div></div><div class="section"><h2>📜 Giveaway Rules</h2><div class="rules">
+1️⃣ Channel Subscribe<br>
+2️⃣ Latest Video Like<br>
+3️⃣ Bell Icon Press<br>
+4️⃣ Comment में BGMI ID लिखो
+</div></div><div class="section"><h2>⏳ Next Winner Countdown</h2><div class="timer" id="timer">Loading...</div></div><div class="section"><h2>🎡 Spin Wheel Winner</h2><a href="https://wheelofnames.com/" target="_blank">
+<button>Spin Wheel</button>
+</a></div><div class="section"><h2>🏆 Last Giveaway Winners</h2><div class="leaderboard">🥇 Player1<br>
+🥈 Player2<br>
+🥉 Player3<br>
+🏅 Player4<br>
+🏅 Player5
 
-</nav><div class="box"><h2>🎁 UC Giveaway</h2><p>हर हफ्ते 10 लोगों को 60 UC मिलेगा</p><p>1 Subscribe<br>
-2 Like Video<br>
-3 Bell Icon Press<br>
-4 Comment BGMI ID
+</div></div><div class="section"><h2>💬 Pick Winner From Comments</h2><a href="https://commentpicker.com/youtube-comment-picker.php" target="_blank">
+<button>Pick Comment Winner</button>
+</a></div><script>
 
-</p><a href="https://commentpicker.com/youtube-comment-picker.php"><button>Pick Giveaway Winner</button>
+var countDownDate = new Date().getTime() + 7*24*60*60*1000;
 
-</a></div></body>
+setInterval(function(){
+
+var now = new Date().getTime();
+var distance = countDownDate - now;
+
+var days = Math.floor(distance/(1000*60*60*24));
+var hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+var minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+
+document.getElementById("timer").innerHTML =
+days+"d "+hours+"h "+minutes+"m";
+
+},1000);
+
+for(let i=0;i<15;i++){
+
+let coin=document.createElement("div");
+
+coin.className="coin";
+
+coin.innerHTML="💰";
+
+coin.style.left=Math.random()*100+"vw";
+
+coin.style.animationDuration=(3+Math.random()*5)+"s";
+
+document.body.appendChild(coin);
+
+}
+
+</script></body>
 </html>
